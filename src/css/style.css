@@ -49,3 +49,44 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+.header{
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 1.9rem 2.375rem 2.4rem 2.375rem;
+}
+
+.header__menu{
+    display: flex;
+    align-items: flex-end;
+
+    gap: 1.6rem;
+}
+
+.header__menu-button{
+    background-color: transparent;
+    border: none;
+}
+
+.header__user-container{
+    display: flex;
+    align-items: center;
+
+    gap: 2.4rem;
+}
+
+.header__cart-button{
+    background-color: transparent;
+    border: none;
+}
+
+.header__avatar-img{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+
+
+
