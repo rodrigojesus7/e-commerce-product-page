@@ -29,6 +29,20 @@
     --text-preset-6-font-weight: 700;
     --text-preset-6-line-height: 1.5rem;
     --text-preset-6-letter-spacing: 0.185rem;
+
+
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --grey-50: #F6F8FD;
+    --grey-100: #E4E9F2;
+    --grey-300: #C3CAD9;
+    --grey-500: #69707D;
+    --grey-950: #1D2026;
+
+    --orange-300: #FFAB6A;
+    --orange-500: #FF7E1B;
 }
 
 
