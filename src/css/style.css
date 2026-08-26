@@ -43,6 +43,7 @@
 
     --orange-300: #FFAB6A;
     --orange-500: #FF7E1B;
+    --shadow: #FF7E1B80
 }
 
 
@@ -239,4 +240,33 @@ body {
     display: flex;
     border: none;
     background-color: transparent;
+}
+
+.addToCart-button {
+    display: flex;
+    gap: 1.6rem;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 5.6rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: var(--orange-500);
+
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight-bold);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--grey-950);
+
+    box-shadow: 0 2rem 5rem -2rem var(--shadow);
+}
+
+.addToCart-button img {
+    width: 1.746rem;
+    height: 1.6rem;
 }
