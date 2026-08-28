@@ -89,6 +89,9 @@ body {
     max-width: 2.4rem;
 }
 
+.header__desktop-menu {
+    display: none;
+}
 
 .product-img-container {
     width: 100%;
