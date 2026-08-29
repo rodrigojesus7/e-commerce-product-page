@@ -138,11 +138,17 @@
 
         color: var(--grey-500);
 
-        cursor: pointer;
     }
 
     .header__desktop-menu li {
+        cursor: pointer;
+
         height: 7.2rem;
+
+        border-bottom: solid 0.3rem transparent;
+
+        transition: border 0.25s ease;
+
     }
 
     .header__desktop-menu li:hover {
