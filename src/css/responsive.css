@@ -96,6 +96,9 @@
 
     .header {
         margin: 0 8.5rem 9.6rem 8.5rem;
+
+        padding: 0;
+
     }
 
     .header__menu {
@@ -106,6 +109,8 @@
         display: flex;
 
         gap: 5.6rem;
+
+        padding-top: 1.2rem;
     }
 
     .header__desktop-menu ul {
@@ -114,6 +119,14 @@
         list-style-type: none;
 
         gap: 3.2rem;
+    }
+
+    .header__desktop-menu a img {
+        margin-top: 0.5rem;
+    }
+
+    .header__desktop-menu ul li a {
+        align-self: center;
     }
 
     .header__desktop-menu a {
@@ -128,6 +141,25 @@
         cursor: pointer;
     }
 
+    .header__desktop-menu li {
+        height: 7.2rem;
+    }
+
+    .header__desktop-menu li:hover {
+        border-bottom: solid 0.3rem var(--orange-500);
+    }
+
+    .header__desktop-menu a {
+        transition: 0.25s ease;
+    }
+
+    .header__desktop-menu li:hover a {
+        color: var(--grey-950);
+    }
+
+    .header__user-container {
+        align-self: flex-start;
+    }
 
     .product {
         display: flex;
