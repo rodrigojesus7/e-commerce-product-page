@@ -89,6 +89,17 @@ body {
 .header__avatar-img {
     height: 2.4rem;
     max-width: 2.4rem;
+
+    cursor: pointer;
+
+    border: solid 0.2rem transparent;
+    border-radius: 50%;
+
+    transition: border 0.25s ease;
+}
+
+.header__avatar-img:hover {
+    border: solid 0.2rem var(--orange-500);
 }
 
 .header__desktop-menu {
@@ -110,7 +121,7 @@ body {
     object-position: center
 }
 
-.product-small-images{
+.product-small-images {
     display: none;
 }
 
