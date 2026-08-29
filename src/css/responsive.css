@@ -11,6 +11,8 @@
         align-items: center;
 
         border-bottom: solid 0.1rem var(--grey-100);
+
+        margin-bottom: 4.8rem;
     }
 
     .header__user-container {
@@ -88,6 +90,9 @@
 
 @media(min-width: 90rem) {
 
+    .header {
+        margin-bottom: 9.6rem;
+    }
 
     .header__menu {
         display: none;
