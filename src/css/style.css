@@ -126,6 +126,10 @@ body {
     display: none;
 }
 
+.small-image-button{
+    border: none;
+}
+
 
 .product__info {
     display: flex;
