@@ -10,8 +10,28 @@ const nextImageBtn = document.querySelector('.next-image-btn')
 const totalImages = 4
 let currentImageIndex = 1
 
+const openMobileNavBtn = document.querySelector('.header__menu-button')
+const closeMobileNavBtn = document.querySelector('.close-mobile-nav-btn')
+const mobileNav = document.querySelector('.mobile-nav')
+const overlayEffect = document.querySelector('.overlay-effect')
+
 
 // Mobile / Tablet
+
+openMobileNavBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('hidden')
+    overlayEffect.classList.remove('hidden')
+})
+
+closeMobileNavBtn.addEventListener('click', () => {
+    mobileNav.classList.add('hidden')
+    overlayEffect.classList.add('hidden')
+})
+
+
+
+
+
 function updateImage() {
     mainImage.src = `../src/images/image-product-${currentImageIndex}.jpg`
 }

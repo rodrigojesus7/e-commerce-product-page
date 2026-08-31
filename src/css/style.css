@@ -30,10 +30,15 @@
     --text-preset-6-line-height: 1.5rem;
     --text-preset-6-letter-spacing: 0.185rem;
 
+    --text-preset-7-font-size: 1.8rem;
+    --text-preset-7-font-weight: 700;
+    --text-preset-7-line-height: 2.6rem;
+    --text-preset-7-letter-spacing: 0rem;
 
 
     --white: #FFFFFF;
     --black: #000000;
+    --overlay: #000000BF;
 
     --grey-border: #979797;
     --grey-50: #F6F8FD;
@@ -105,6 +110,64 @@ body {
 
 .header__desktop-menu {
     display: none;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5.6rem;
+
+    position: fixed;
+    z-index: 7;
+
+    height: 100%;
+    width: 25rem;
+
+    padding: 2.4rem;
+
+    background-color: var(--white);
+}
+
+.mobile-nav button {
+    background-color: transparent;
+    border: none;
+
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+
+    list-style: none;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: var(--text-preset-7-font-size);
+    font-weight: var(--text-preset-7-font-weight);
+    line-height: var(--text-preset-7-line-height);
+    letter-spacing: var(--text-preset-7-letter-spacing);
+
+    color: var(--grey-950);
+
+}
+
+.overlay-effect {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+
+    z-index: 6;
+
+    background-color: var(--overlay);
 }
 
 .product-img-container {
@@ -329,4 +392,8 @@ body {
 .addToCart-button img {
     width: 1.746rem;
     height: 1.6rem;
+}
+
+.hidden{
+    display: none;
 }
