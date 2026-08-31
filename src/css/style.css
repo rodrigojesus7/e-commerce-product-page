@@ -112,6 +112,8 @@ body {
     min-height: 30rem;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 .product-img {
@@ -122,11 +124,41 @@ body {
     object-position: center
 }
 
+.change-image-container {
+    position: absolute;
+    z-index: 3;
+    top: 42%;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 1.6rem;
+}
+
+.previous-image-btn,
+.next-image-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 2rem;
+
+    background-color: var(--white);
+
+    width: 4rem;
+    height: 4rem;
+
+    cursor: pointer;
+}
+
 .product-small-images {
     display: none;
 }
 
-.small-image-button{
+.small-image-button {
     border: none;
     background-color: transparent;
 }

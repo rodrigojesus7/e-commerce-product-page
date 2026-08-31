@@ -199,6 +199,10 @@
         object-position: center;
     }
 
+    .change-image-container{
+        display: none;
+    }
+
 
     .product-small-images {
         display: flex;
