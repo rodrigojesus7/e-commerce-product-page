@@ -220,6 +220,10 @@
         filter: opacity(25%);
     }
 
+    .product-small-images--selected {
+        border: solid 0.2rem var(--orange-500);
+        filter: opacity(25%);
+    }
 
     .product__info {
         justify-content: center;
