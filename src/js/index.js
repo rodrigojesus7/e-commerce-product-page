@@ -33,7 +33,7 @@ closeMobileNavBtn.addEventListener('click', () => {
 
 
 function updateImage() {
-    mainImage.src = `../src/images/image-product-${currentImageIndex}.jpg`
+    mainImage.src = `./src/images/image-product-${currentImageIndex}.jpg`
 }
 
 previousImageBtn.addEventListener('click', () => {
