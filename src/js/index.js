@@ -106,6 +106,9 @@ function clearSelection() {
         image.classList.remove('product-small-images--selected')
     })
 
+    overlayThumbnail.forEach(image => {
+        image.classList.remove('product-small-images--selected')
+    })
 
 }
 
@@ -132,6 +135,14 @@ overlayPreviousImageBtn.addEventListener('click', () => {
         currentImageIndex = totalImages
     }
 
+    thumbnailIndex = currentImageIndex - 1
+
+    clearSelection()
+
+    thumbnail[thumbnailIndex].classList.add('product-small-images--selected')
+
+    overlayThumbnail[thumbnailIndex].classList.add('product-small-images--selected')
+
     updateImage()
 })
 
@@ -142,9 +153,37 @@ overlayNextImageBtn.addEventListener('click', () => {
         currentImageIndex = 1
     }
 
+    thumbnailIndex = currentImageIndex - 1
+
+    clearSelection()
+
+    thumbnail[thumbnailIndex].classList.add('product-small-images--selected')
+
+    overlayThumbnail[thumbnailIndex].classList.add('product-small-images--selected')
+
+
     updateImage()
 })
 
 
+
+overlaySmallImages.forEach((image, index) => {
+
+    image.addEventListener('click', () => {
+
+        clearSelection()
+
+        const thumbnailSrc = image.querySelector('img').src;
+
+        mainImage.src = thumbnailSrc.replace('-thumbnail.jpg', '.jpg')
+
+        thumbnail[index].classList.add('product-small-images--selected')
+
+        overlayThumbnail[index].classList.add('product-small-images--selected')
+
+
+        overlayMainImage.src = thumbnailSrc.replace('-thumbnail.jpg', '.jpg')
+    })
+});
 
 
