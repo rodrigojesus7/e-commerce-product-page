@@ -265,6 +265,10 @@
 
     }
 
+    .hidden{
+        display: none;
+    }
+
     .overlay-product-gallery-container {
         display: flex;
         flex-direction: column;
@@ -279,6 +283,8 @@
         background-color: transparent;
 
         align-self: flex-end;
+
+        cursor: pointer;
     }
 
     .overlay-product-gallery-close-button img {
@@ -314,6 +320,8 @@
 
         border: none;
         background-color: var(--white);
+
+        cursor: pointer;
     }
 
     .overlay-previous-image-btn {
