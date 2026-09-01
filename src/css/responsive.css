@@ -359,7 +359,7 @@
     }
 
     .overlay-previous-image-btn {
-        transform: translateX(-2.7rem);
+        transform: translateX(-2.8rem);
     }
 
     .overlay-previous-image-btn svg {
@@ -372,7 +372,7 @@
     }
 
     .overlay-next-image-btn {
-        transform: translateX(2.7rem);
+        transform: translateX(2.8rem);
     }
 
     .overlay-next-image-btn svg {
