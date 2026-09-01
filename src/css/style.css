@@ -323,8 +323,6 @@ body {
     width: 100%;
     height: 30rem;
 
-    overflow: hidden;
-
     position: relative;
 }
 
@@ -373,6 +371,9 @@ body {
 .small-image-button {
     border: none;
     background-color: transparent;
+
+    height: 8.8rem;
+    width: 8.8rem;
 }
 
 
@@ -542,6 +543,11 @@ body {
     box-shadow: 0 2rem 5rem -2rem var(--shadow);
 
     cursor: pointer;
+}
+
+.addToCart-button:hover,
+.addToCart-button:focus-visible {
+    background-color: var(--orange-300);
 }
 
 .addToCart-button img {
