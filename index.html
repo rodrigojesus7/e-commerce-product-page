@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor Challenge - E-commerce Product Page. This is a solution to the challenge, which consists of building an e-commerce product page with a lightbox gallery and a shopping cart.">
+    
     <title>E-commerce Product Page</title>
 
     <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
@@ -42,9 +44,11 @@
     <header class="header">
         <div class="header__menu">
             <button class="header__menu-button" aria-label="Open mobile navigation menu"
-                aria-controls="mobile-navigation"><img src="./src/images/icon-menu.svg" alt=""></button>
+                aria-controls="mobile-navigation">
+                <img src="./src/images/icon-menu.svg" alt="">
+            </button>
 
-            <a href=""><img src="./src/images/logo.svg" alt=""></a>
+            <a href="" aria-label="Homepage"><img src="./src/images/logo.svg" alt=""></a>
         </div>
 
         <nav class="header__desktop-menu" aria-label="Main navigation">
@@ -109,8 +113,8 @@
 
         <article class="product">
             <div class="product-img-container">
-                <img class="product-img" src="./src/images/image-product-1.jpg" alt="" aria-label="Open lightbox product image gallery"
-                    aria-controls="overlay-product-gallery">
+                <img class="product-img" src="./src/images/image-product-1.jpg" alt=""
+                    aria-label="Open lightbox product image gallery" aria-controls="overlay-product-gallery">
 
                 <div class="change-image-container">
                     <button class="previous-image-btn" aria-label="Previous image button">
@@ -142,7 +146,8 @@
             <div class="overlay-product-gallery hidden" id="overlay-product-gallery" aria-expanded="false">
 
                 <div class="overlay-product-gallery-container">
-                    <button class="overlay-product-gallery-close-button" aria-label="Close lightbox product image gallery">
+                    <button class="overlay-product-gallery-close-button"
+                        aria-label="Close lightbox product image gallery">
                         <svg width="14" height="15" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
