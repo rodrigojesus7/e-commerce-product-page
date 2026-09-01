@@ -543,6 +543,8 @@ body {
     box-shadow: 0 2rem 5rem -2rem var(--shadow);
 
     cursor: pointer;
+
+    transition: 0.25s ease;
 }
 
 .addToCart-button:hover,
