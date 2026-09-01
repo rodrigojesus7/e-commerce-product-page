@@ -43,6 +43,7 @@ const cartContainer = document.querySelector('.cart-container')
 openMobileNavBtn.addEventListener('click', () => {
     mobileNav.classList.remove('hidden')
     overlayEffect.classList.remove('hidden')
+    cartContainer.classList.add('hidden')
 })
 
 closeMobileNavBtn.addEventListener('click', () => {
