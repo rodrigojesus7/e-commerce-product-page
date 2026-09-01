@@ -211,8 +211,9 @@ overlaySmallImages.forEach((image, index) => {
 
         overlayThumbnail[index].classList.add('product-small-images--selected')
 
-
         overlayMainImage.src = thumbnailSrc.replace('-thumbnail.jpg', '.jpg')
+
+        currentImageIndex = index + 1
     })
 });
 
