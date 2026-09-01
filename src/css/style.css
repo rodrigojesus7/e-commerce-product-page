@@ -397,6 +397,16 @@ body {
     cursor: pointer;
 }
 
+.previous-image-btn svg {
+    stroke: var(--grey-950);
+    height: 1.143rem;
+    width: 0.571rem;
+}
+
+.next-image-btn svg {
+    stroke: var(--grey-950)
+}
+
 .product-small-images {
     display: none;
 }
