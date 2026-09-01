@@ -33,7 +33,12 @@
     --text-preset-7-font-size: 1.8rem;
     --text-preset-7-font-weight: 700;
     --text-preset-7-line-height: 2.6rem;
-    --text-preset-7-letter-spacing: 0rem;
+    --text-preset-7-letter-spacing: 0;
+
+    --text-preset-8-font-size: 1.0rem;
+    --text-preset-8-font-weight: 700;
+    --text-preset-8-line-height: normal;
+    --text-preset-8-letter-spacing: 0;
 
 
     --white: #FFFFFF;
@@ -91,6 +96,33 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    position: relative;
+}
+
+.cart-visual-item-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    top: -0.6rem;
+    right: -0.57rem;
+
+    min-width: 1.9rem;
+    height: 1.3rem;
+
+    border-radius: 0.65rem;
+
+    background-color: var(--orange-500);
+
+    font-size: var(--text-preset-8-font-size);
+    font-weight: var(--text-preset-8-font-weight-bold);
+    line-height: var(--text-preset-8-line-height);
+    letter-spacing: var(--text-preset-8-letter-spacing);
+
+    color: var(--white);
 }
 
 .cart-container {
@@ -239,6 +271,7 @@ body {
 
     color: var(--grey-950);
 
+    cursor: pointer;
 }
 
 .header__avatar-img {

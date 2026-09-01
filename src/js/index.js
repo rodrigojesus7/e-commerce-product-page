@@ -54,6 +54,9 @@ let cartItemImage = document.querySelector('.cart-items__image')
 let itemTitle = document.querySelector('.product__title')
 let itemPrice = document.querySelector('.product_price-value')
 
+const cartVisualItemCount = document.querySelector('.cart-visual-item-count')
+let cartVisualItemCountNumber = document.querySelector('.cart-visual-item-count-number')
+
 // Mobile / Tablet
 
 openMobileNavBtn.addEventListener('click', () => {
@@ -241,6 +244,9 @@ cartItemDeleteBtn.addEventListener('click', () => {
     itemQuantity.textContent = 0
 
     cartItemQuantity.textContent = 0
+
+    cartVisualItemCount.classList.add('hidden')
+
 })
 
 
@@ -281,6 +287,9 @@ addToCartBtn.addEventListener('click', () => {
         cartItemQuantity.textContent = itemQuantityValue + Number(cartItemQuantity.textContent)
 
         cartItemTotalPrice.textContent = (Number(cartItemQuantity.textContent) * Number(cartItemUnityPrice.textContent)).toFixed(2)
+
+        cartVisualItemCount.classList.remove('hidden')
+        cartVisualItemCountNumber.textContent = Number(cartItemQuantity.textContent)
     }
 
 })
