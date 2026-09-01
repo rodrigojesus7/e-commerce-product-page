@@ -269,13 +269,13 @@ addToCartBtn.addEventListener('click', () => {
         cartItemsContainer.classList.remove('hidden')
 
         cartItemTitle.textContent = itemTitle.textContent
-        cartItemUnityPrice.textContent = Number(itemPrice.textContent)
+        cartItemUnityPrice.textContent = Number(itemPrice.textContent).toFixed(2)
 
         cartItemImage.src = thumbnail[0].src
 
         cartItemQuantity.textContent = itemQuantityValue + Number(cartItemQuantity.textContent)
 
-        cartItemTotalPrice.textContent = Number(cartItemQuantity.textContent) * Number(cartItemUnityPrice.textContent)
+        cartItemTotalPrice.textContent = (Number(cartItemQuantity.textContent) * Number(cartItemUnityPrice.textContent)).toFixed(2)
     }
 
 })
