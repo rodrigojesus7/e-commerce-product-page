@@ -192,6 +192,8 @@ body {
 .cart-items__delete-btn {
     border: none;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 .cart-items__prices-container {
