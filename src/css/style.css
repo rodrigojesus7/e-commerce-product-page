@@ -134,12 +134,13 @@ body {
 
 .cart-items-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     min-height: 18.2rem;
 
-    flex-shrink: 0;
+    padding: 2.4rem;
 }
 
 .cart-items-container__empty-message {
@@ -149,6 +150,90 @@ body {
     letter-spacing: var(--text-preset-3-letter-spacing);
 
     color: var(--grey-500);
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+}
+
+.cart-items__info {
+    display: flex;
+
+    gap: 1.6rem;
+}
+
+.cart-items__item-title {
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight-regular);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--grey-500);
+}
+
+.cart-items__info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items__image {
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 0.4rem;
+}
+
+.cart-items__delete-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.cart-items__prices-container {
+    display: flex;
+
+    gap: 0.8rem;
+}
+
+.cart-items__unity-price-container {
+    display: flex;
+}
+
+.cart-items__unity-price-text {
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight-regular);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--grey-500);
+}
+
+.cart-items__total-price-text {
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight-bold);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--grey-950);
+}
+
+.cart-items__checkout-btn {
+    height: 5.6rem;
+
+    background-color: var(--orange-500);
+    
+    border-radius: 1rem;
+    border: none;
+
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight-bold);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--grey-950);
+
 }
 
 .header__avatar-img {
