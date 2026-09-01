@@ -493,6 +493,8 @@ body {
     display: flex;
     border: none;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 
@@ -510,6 +512,8 @@ body {
     display: flex;
     border: none;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 .addToCart-button {
@@ -534,6 +538,8 @@ body {
     color: var(--grey-950);
 
     box-shadow: 0 2rem 5rem -2rem var(--shadow);
+
+    cursor: pointer;
 }
 
 .addToCart-button img {

@@ -36,6 +36,9 @@ const overlayEffect = document.querySelector('.overlay-effect')
 
 const cartBtn = document.querySelector('.header__cart-button')
 const cartContainer = document.querySelector('.cart-container')
+const cartItemDeleteBtn = document.querySelector('.cart-items__delete-btn')
+const emptyCartMessage = document.querySelector('.cart-items-container__empty-message')
+const cartItemsContainer = document.querySelector('.cart-items')
 
 
 // Mobile / Tablet
@@ -209,4 +212,9 @@ cartBtn.addEventListener('click', () => {
     } else {
         cartContainer.classList.add('hidden')
     }
+})
+
+cartItemDeleteBtn.addEventListener('click', () => {
+    emptyCartMessage.classList.remove('hidden')
+    cartItemsContainer.classList.add('hidden')
 })

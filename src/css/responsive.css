@@ -363,6 +363,8 @@
     .overlay-small-image-button {
         border: none;
         background-color: transparent;
+
+        cursor: pointer;
     }
 
     .overlay-thumbnail {
