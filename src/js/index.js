@@ -158,6 +158,7 @@ mainImage.addEventListener('click', () => {
 
     if (window.innerWidth >= 1440) {
         overlayGallery.classList.remove('hidden')
+        overlayGallery.setAttribute('aria-expanded', 'true')
     }
 
     cartContainer.classList.add('hidden')
@@ -168,6 +169,8 @@ mainImage.addEventListener('click', () => {
 
 closeOverlayGalleryBtn.addEventListener('click', () => {
     overlayGallery.classList.add('hidden')
+    overlayGallery.setAttribute('aria-expanded', 'false')
+
 })
 
 
