@@ -23,7 +23,7 @@ const overlayNextImageBtn = document.querySelector('.overlay-next-image-btn')
 
 const totalImages = 4
 let currentImageIndex = 1
-
+let itemQuantityValue = 0
 
 
 
@@ -39,6 +39,10 @@ const cartContainer = document.querySelector('.cart-container')
 const cartItemDeleteBtn = document.querySelector('.cart-items__delete-btn')
 const emptyCartMessage = document.querySelector('.cart-items-container__empty-message')
 const cartItemsContainer = document.querySelector('.cart-items')
+
+let itemQuantity = document.querySelector('.addToCart__item-quantity')
+const minusBtn = document.querySelector('.addToCart__minus-quantity-button')
+const plusBtn = document.querySelector('.addToCart__plus-quantity-button')
 
 
 // Mobile / Tablet
@@ -217,4 +221,25 @@ cartBtn.addEventListener('click', () => {
 cartItemDeleteBtn.addEventListener('click', () => {
     emptyCartMessage.classList.remove('hidden')
     cartItemsContainer.classList.add('hidden')
+})
+
+
+minusBtn.addEventListener('click', () => {
+
+    itemQuantityValue = Number(itemQuantity.textContent)
+
+    if (itemQuantityValue > 0) {
+        itemQuantityValue--
+    }
+
+    itemQuantity.textContent = itemQuantityValue
+})
+
+plusBtn.addEventListener('click', () => {
+
+    itemQuantityValue = Number(itemQuantity.textContent)
+
+    itemQuantityValue++
+
+    itemQuantity.textContent = itemQuantityValue
 })
