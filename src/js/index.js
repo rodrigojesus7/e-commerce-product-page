@@ -62,12 +62,19 @@ let cartVisualItemCountNumber = document.querySelector('.cart-visual-item-count-
 openMobileNavBtn.addEventListener('click', () => {
     mobileNav.classList.remove('hidden')
     overlayEffect.classList.remove('hidden')
+
     cartContainer.classList.add('hidden')
+    cartContainer.setAttribute('aria-expanded', 'false')
+
+
+    mobileNav.setAttribute('aria-expanded', 'true')
 })
 
 closeMobileNavBtn.addEventListener('click', () => {
     mobileNav.classList.add('hidden')
     overlayEffect.classList.add('hidden')
+
+    mobileNav.setAttribute('aria-expanded', 'false')
 })
 
 
@@ -154,6 +161,7 @@ mainImage.addEventListener('click', () => {
     }
 
     cartContainer.classList.add('hidden')
+    cartContainer.setAttribute('aria-expanded', 'false')
 
 
 })
@@ -233,8 +241,10 @@ overlaySmallImages.forEach((image, index) => {
 cartBtn.addEventListener('click', () => {
     if (cartContainer.classList.contains('hidden')) {
         cartContainer.classList.remove('hidden')
+        cartContainer.setAttribute('aria-expanded', 'true')
     } else {
         cartContainer.classList.add('hidden')
+        cartContainer.setAttribute('aria-expanded', 'false')
     }
 })
 
@@ -278,6 +288,7 @@ addToCartBtn.addEventListener('click', () => {
     if (itemQuantityValue > 0) {
 
         cartContainer.classList.remove('hidden')
+        cartContainer.setAttribute('aria-expanded', 'true')
 
         emptyCartMessage.classList.add('hidden')
         cartItemsContainer.classList.remove('hidden')
@@ -293,6 +304,7 @@ addToCartBtn.addEventListener('click', () => {
 
         cartVisualItemCount.classList.remove('hidden')
         cartVisualItemCountNumber.textContent = Number(cartItemQuantity.textContent)
+
     }
 
 })

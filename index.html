@@ -22,9 +22,9 @@
 
     <div class="overlay-effect hidden"></div>
 
-    <nav class="mobile-nav hidden">
+    <nav class="mobile-nav hidden" aria-label="Mobile navigation" id="mobile-navigation" aria-expanded="false">
 
-        <button class="close-mobile-nav-btn">
+        <button class="close-mobile-nav-btn" aria-label="Close mobile navigation menu">
             <img src="./src/images/icon-close.svg" alt="">
         </button>
 
@@ -41,13 +41,15 @@
 
     <header class="header">
         <div class="header__menu">
-            <button class="header__menu-button"><img src="./src/images/icon-menu.svg" alt=""></button>
+            <button class="header__menu-button" aria-label="Open mobile navigation menu" aria-controls="mobile-navigation"><img src="./src/images/icon-menu.svg" alt=""></button>
 
             <a href=""><img src="./src/images/logo.svg" alt=""></a>
         </div>
 
-        <nav class="header__desktop-menu">
-            <a href=""><img src="./src/images/logo.svg" alt=""></a>
+        <nav class="header__desktop-menu" aria-label="Main navigation">
+            <a href="" aria-label="Homepage">
+                <img src="./src/images/logo.svg" alt="">
+            </a>
             <ul>
                 <li><a href="">Collections</a></li>
                 <li><a href="">Men</a></li>
@@ -58,12 +60,12 @@
         </nav>
 
         <div class="header__user-container">
-            <button class="header__cart-button">
+            <button class="header__cart-button" aria-label="Cart button" aria-controls="cart-container">
                 <img src="./src/images/icon-cart.svg" alt="">
                 <div class="cart-visual-item-count hidden"><span class="cart-visual-item-count-number">3</span></div>
             </button>
 
-            <div class="cart-container hidden">
+            <div class="cart-container hidden" id="cart-container" aria-expanded="false">
                 <div class="cart-container-title-container">
                     <p class="cart-container-title-container__title">Cart</p>
                 </div>
@@ -109,11 +111,11 @@
                 <img class="product-img" src="./src/images/image-product-1.jpg" alt="">
 
                 <div class="change-image-container">
-                    <button class="previous-image-btn">
+                    <button class="previous-image-btn" aria-label="Previous image button">
                         <img class="change-image-arrow-icon" src="./src/images/icon-previous.svg" alt="">
                     </button>
 
-                    <button class="next-image-btn">
+                    <button class="next-image-btn" aria-label="Next image button">
                         <img class="change-image-arrow-icon" src="./src/images/icon-next.svg" alt="">
                     </button>
                 </div>
@@ -204,10 +206,10 @@
 
                 <div class="addToCart-container">
                     <div class="addToCart-quantitySelector-container">
-                        <button class="addToCart__minus-quantity-button"><img src="./src/images/icon-minus.svg"
+                        <button class="addToCart__minus-quantity-button" aria-label="Minus one product select button"><img src="./src/images/icon-minus.svg"
                                 alt=""></button>
-                        <p class="addToCart__item-quantity">0</p>
-                        <button class="addToCart__plus-quantity-button"><img src="./src/images/icon-plus.svg"
+                        <p class="addToCart__item-quantity" aria-label="Number of products to be added to cart">0</p>
+                        <button class="addToCart__plus-quantity-button" aria-label="Add one product select button"><img src="./src/images/icon-plus.svg"
                                 alt=""></button>
                     </div>
 
