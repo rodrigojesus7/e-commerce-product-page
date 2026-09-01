@@ -445,6 +445,8 @@ body {
     letter-spacing: var(--text-preset-6-letter-spacing);
 
     color: var(--grey-500);
+
+    text-transform: uppercase;
 }
 
 .product__title {
