@@ -118,7 +118,7 @@ body {
     background-color: var(--orange-500);
 
     font-size: var(--text-preset-8-font-size);
-    font-weight: var(--text-preset-8-font-weight-bold);
+    font-weight: var(--text-preset-8-font-weight);
     line-height: var(--text-preset-8-line-height);
     letter-spacing: var(--text-preset-8-letter-spacing);
 

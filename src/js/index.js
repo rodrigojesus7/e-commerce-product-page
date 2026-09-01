@@ -64,17 +64,15 @@ openMobileNavBtn.addEventListener('click', () => {
     overlayEffect.classList.remove('hidden')
 
     cartContainer.classList.add('hidden')
-    cartContainer.setAttribute('aria-expanded', 'false')
 
-
-    mobileNav.setAttribute('aria-expanded', 'true')
+    openMobileNavBtn.setAttribute('aria-expanded', 'true')
 })
 
 closeMobileNavBtn.addEventListener('click', () => {
     mobileNav.classList.add('hidden')
     overlayEffect.classList.add('hidden')
 
-    mobileNav.setAttribute('aria-expanded', 'false')
+    openMobileNavBtn.setAttribute('aria-expanded', 'false')
 })
 
 
@@ -158,18 +156,17 @@ mainImage.addEventListener('click', () => {
 
     if (window.innerWidth >= 1440) {
         overlayGallery.classList.remove('hidden')
-        overlayGallery.setAttribute('aria-expanded', 'true')
+        mainImage.setAttribute('aria-expanded', 'true')
     }
 
     cartContainer.classList.add('hidden')
-    cartContainer.setAttribute('aria-expanded', 'false')
 
 
 })
 
 closeOverlayGalleryBtn.addEventListener('click', () => {
     overlayGallery.classList.add('hidden')
-    overlayGallery.setAttribute('aria-expanded', 'false')
+    mainImage.setAttribute('aria-expanded', 'false')
 
 })
 
@@ -190,7 +187,6 @@ overlayPreviousImageBtn.addEventListener('click', () => {
     overlayThumbnail[thumbnailIndex].classList.add('product-small-images--selected')
 
     updateImage()
-    console.log(currentImageIndex)
 })
 
 overlayNextImageBtn.addEventListener('click', () => {
@@ -244,10 +240,10 @@ overlaySmallImages.forEach((image, index) => {
 cartBtn.addEventListener('click', () => {
     if (cartContainer.classList.contains('hidden')) {
         cartContainer.classList.remove('hidden')
-        cartContainer.setAttribute('aria-expanded', 'true')
+        cartBtn.setAttribute('aria-expanded', 'true')
     } else {
         cartContainer.classList.add('hidden')
-        cartContainer.setAttribute('aria-expanded', 'false')
+        cartBtn.setAttribute('aria-expanded', 'false')
     }
 })
 
@@ -291,7 +287,6 @@ addToCartBtn.addEventListener('click', () => {
     if (itemQuantityValue > 0) {
 
         cartContainer.classList.remove('hidden')
-        cartContainer.setAttribute('aria-expanded', 'true')
 
         emptyCartMessage.classList.add('hidden')
         cartItemsContainer.classList.remove('hidden')

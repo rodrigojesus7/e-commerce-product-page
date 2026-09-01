@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Frontend Mentor Challenge - E-commerce Product Page. This is a solution to the challenge, which consists of building an e-commerce product page with a lightbox gallery and a shopping cart.">
-    
+
     <title>E-commerce Product Page</title>
 
     <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
@@ -24,7 +24,7 @@
 
     <div class="overlay-effect hidden"></div>
 
-    <nav class="mobile-nav hidden" aria-label="Mobile navigation" id="mobile-navigation" aria-expanded="false">
+    <nav class="mobile-nav hidden" aria-label="Mobile navigation" id="mobile-navigation">
 
         <button class="close-mobile-nav-btn" aria-label="Close mobile navigation menu">
             <img src="./src/images/icon-close.svg" alt="">
@@ -44,7 +44,7 @@
     <header class="header">
         <div class="header__menu">
             <button class="header__menu-button" aria-label="Open mobile navigation menu"
-                aria-controls="mobile-navigation">
+                aria-controls="mobile-navigation" aria-expanded="false">
                 <img src="./src/images/icon-menu.svg" alt="">
             </button>
 
@@ -65,12 +65,12 @@
         </nav>
 
         <div class="header__user-container">
-            <button class="header__cart-button" aria-label="Cart button" aria-controls="cart-container">
+            <button class="header__cart-button" aria-label="Cart button" aria-controls="cart-container" aria-expanded="false">
                 <img src="./src/images/icon-cart.svg" alt="">
                 <div class="cart-visual-item-count hidden"><span class="cart-visual-item-count-number">3</span></div>
             </button>
 
-            <div class="cart-container hidden" id="cart-container" aria-expanded="false">
+            <div class="cart-container hidden" id="cart-container">
                 <div class="cart-container-title-container">
                     <p class="cart-container-title-container__title">Cart</p>
                 </div>
@@ -91,7 +91,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <button class="cart-items__delete-btn">
+                            <button class="cart-items__delete-btn" aria-label="Remove products from cart">
                                 <img src="./src/images/icon-delete.svg" alt="">
                             </button>
                         </div>
@@ -113,8 +113,8 @@
 
         <article class="product">
             <div class="product-img-container">
-                <img class="product-img" src="./src/images/image-product-1.jpg" alt=""
-                    aria-label="Open lightbox product image gallery" aria-controls="overlay-product-gallery">
+                <img class="product-img" src="./src/images/image-product-1.jpg" alt="Fall Limited Edition Sneakers"
+                    aria-label="Open lightbox product image gallery" aria-controls="overlay-product-gallery" aria-expanded="false">
 
                 <div class="change-image-container">
                     <button class="previous-image-btn" aria-label="Previous image button">
@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="overlay-product-gallery hidden" id="overlay-product-gallery" aria-expanded="false">
+            <div class="overlay-product-gallery hidden" id="overlay-product-gallery">
 
                 <div class="overlay-product-gallery-container">
                     <button class="overlay-product-gallery-close-button"
@@ -216,7 +216,7 @@
                         <button class="addToCart__minus-quantity-button"
                             aria-label="Minus one product select button"><img src="./src/images/icon-minus.svg"
                                 alt=""></button>
-                        <p class="addToCart__item-quantity" aria-label="Number of products to be added to cart">0</p>
+                        <p class="addToCart__item-quantity" aria-label="Number of products to be added to cart" aria-live="polite">0</p>
                         <button class="addToCart__plus-quantity-button" aria-label="Add one product select button"><img
                                 src="./src/images/icon-plus.svg" alt=""></button>
                     </div>
