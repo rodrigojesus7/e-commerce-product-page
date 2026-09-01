@@ -161,7 +161,7 @@ overlayPreviousImageBtn.addEventListener('click', () => {
         currentImageIndex = totalImages
     }
 
-    thumbnailIndex = currentImageIndex - 1
+    let thumbnailIndex = currentImageIndex - 1
 
     clearSelection()
 
@@ -179,7 +179,7 @@ overlayNextImageBtn.addEventListener('click', () => {
         currentImageIndex = 1
     }
 
-    thumbnailIndex = currentImageIndex - 1
+    let thumbnailIndex = currentImageIndex - 1
 
     clearSelection()
 
@@ -262,6 +262,8 @@ plusBtn.addEventListener('click', () => {
 
 addToCartBtn.addEventListener('click', () => {
     if (itemQuantityValue > 0) {
+
+        cartContainer.classList.remove('hidden')
 
         emptyCartMessage.classList.add('hidden')
         cartItemsContainer.classList.remove('hidden')
