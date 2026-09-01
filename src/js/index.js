@@ -110,7 +110,6 @@ nextImageBtn.addEventListener('click', () => {
 smallImages.forEach((image, index) => {
 
     image.addEventListener('click', () => {
-
         clearSelection()
 
         const thumbnailSrc = image.querySelector('img').src;
@@ -122,6 +121,8 @@ smallImages.forEach((image, index) => {
         overlayThumbnail[index].classList.add('product-small-images--selected')
 
         overlayMainImage.src = thumbnailSrc.replace('-thumbnail.jpg', '.jpg')
+
+        currentImageIndex = index + 1
     })
 });
 
@@ -172,6 +173,7 @@ overlayPreviousImageBtn.addEventListener('click', () => {
     overlayThumbnail[thumbnailIndex].classList.add('product-small-images--selected')
 
     updateImage()
+    console.log(currentImageIndex)
 })
 
 overlayNextImageBtn.addEventListener('click', () => {
