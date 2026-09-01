@@ -153,6 +153,9 @@ mainImage.addEventListener('click', () => {
         overlayGallery.classList.remove('hidden')
     }
 
+    cartContainer.classList.add('hidden')
+
+
 })
 
 closeOverlayGalleryBtn.addEventListener('click', () => {
