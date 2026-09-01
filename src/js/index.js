@@ -43,7 +43,16 @@ const cartItemsContainer = document.querySelector('.cart-items')
 let itemQuantity = document.querySelector('.addToCart__item-quantity')
 const minusBtn = document.querySelector('.addToCart__minus-quantity-button')
 const plusBtn = document.querySelector('.addToCart__plus-quantity-button')
+const addToCartBtn = document.querySelector('.addToCart-button')
 
+let cartItemTitle = document.querySelector('.cart-items__item-title')
+let cartItemUnityPrice = document.querySelector('.cart-item-unity-price')
+let cartItemQuantity = document.querySelector('.cart-item-quantity')
+let cartItemTotalPrice = document.querySelector('.cart-item-total-price')
+let cartItemImage = document.querySelector('.cart-items__image')
+
+let itemTitle = document.querySelector('.product__title')
+let itemPrice = document.querySelector('.product_price-value')
 
 // Mobile / Tablet
 
@@ -221,6 +230,12 @@ cartBtn.addEventListener('click', () => {
 cartItemDeleteBtn.addEventListener('click', () => {
     emptyCartMessage.classList.remove('hidden')
     cartItemsContainer.classList.add('hidden')
+
+    itemQuantityValue = 0
+
+    itemQuantity.textContent = 0
+
+    cartItemQuantity.textContent = 0
 })
 
 
@@ -243,3 +258,23 @@ plusBtn.addEventListener('click', () => {
 
     itemQuantity.textContent = itemQuantityValue
 })
+
+
+addToCartBtn.addEventListener('click', () => {
+    if (itemQuantityValue > 0) {
+
+        emptyCartMessage.classList.add('hidden')
+        cartItemsContainer.classList.remove('hidden')
+
+        cartItemTitle.textContent = itemTitle.textContent
+        cartItemUnityPrice.textContent = Number(itemPrice.textContent)
+
+        cartItemImage.src = thumbnail[0].src
+
+        cartItemQuantity.textContent = itemQuantityValue + Number(cartItemQuantity.textContent)
+
+        cartItemTotalPrice.textContent = Number(cartItemQuantity.textContent) * Number(cartItemUnityPrice.textContent)
+    }
+
+})
+
