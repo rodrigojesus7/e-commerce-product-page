@@ -33,6 +33,11 @@ const mobileNav = document.querySelector('.mobile-nav')
 const overlayEffect = document.querySelector('.overlay-effect')
 
 
+
+const cartBtn = document.querySelector('.header__cart-button')
+const cartContainer = document.querySelector('.cart-container')
+
+
 // Mobile / Tablet
 
 openMobileNavBtn.addEventListener('click', () => {
@@ -191,3 +196,16 @@ overlaySmallImages.forEach((image, index) => {
 });
 
 
+
+
+
+
+// Cart
+
+cartBtn.addEventListener('click', () => {
+    if (cartContainer.classList.contains('hidden')) {
+        cartContainer.classList.remove('hidden')
+    } else {
+        cartContainer.classList.add('hidden')
+    }
+})
