@@ -120,7 +120,11 @@ function clearSelection() {
 
 
 mainImage.addEventListener('click', () => {
-    overlayGallery.classList.remove('hidden')
+
+    if (window.innerWidth >= 1440) {
+        overlayGallery.classList.remove('hidden')
+    }
+
 })
 
 closeOverlayGalleryBtn.addEventListener('click', () => {
