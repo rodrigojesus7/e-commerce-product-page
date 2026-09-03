@@ -3,6 +3,7 @@ const smallImages = document.querySelectorAll('.small-image-button')
 const thumbnail = document.querySelectorAll('.thumbnail')
 
 const mainImage = document.querySelector('.product-img')
+const mainImageBtn = document.querySelector('.product-img-btn')
 
 const previousImageBtn = document.querySelector('.previous-image-btn')
 const nextImageBtn = document.querySelector('.next-image-btn')
@@ -152,11 +153,11 @@ function clearSelection() {
 
 
 
-mainImage.addEventListener('click', () => {
+mainImageBtn.addEventListener('click', () => {
 
     if (window.innerWidth >= 1440) {
         overlayGallery.classList.remove('hidden')
-        mainImage.setAttribute('aria-expanded', 'true')
+        mainImageBtn.setAttribute('aria-expanded', 'true')
     }
 
     cartContainer.classList.add('hidden')
@@ -166,7 +167,7 @@ mainImage.addEventListener('click', () => {
 
 closeOverlayGalleryBtn.addEventListener('click', () => {
     overlayGallery.classList.add('hidden')
-    mainImage.setAttribute('aria-expanded', 'false')
+    mainImageBtn.setAttribute('aria-expanded', 'false')
 
 })
 
