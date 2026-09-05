@@ -261,6 +261,7 @@ cartItemDeleteBtn.addEventListener('click', () => {
 
     cartVisualItemCount.classList.add('hidden')
 
+    updateCartAriaLabel(0)
 })
 
 
@@ -305,7 +306,24 @@ addToCartBtn.addEventListener('click', () => {
         cartVisualItemCount.classList.remove('hidden')
         cartVisualItemCountNumber.textContent = Number(cartItemQuantity.textContent)
 
+        updateCartAriaLabel(Number(cartItemQuantity.textContent))
+
     }
 
 })
+
+
+
+function updateCartAriaLabel(count) {
+    if (count === 0) {
+        cartBtn.setAttribute('aria-label', 'Cart, empty');
+    } else if (count === 1) {
+        cartBtn.setAttribute('aria-label', 'Cart with 1 item');
+    } else {
+        cartBtn.setAttribute('aria-label', `Cart with ${count} items`);
+    }
+}
+
+updateCartAriaLabel(Number(cartItemQuantity.textContent) || 0);
+
 
